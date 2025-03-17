@@ -8,15 +8,24 @@
     
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     scroll-behavior: smooth;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(228, 228, 228);
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
 }
 
 #home{
-    background-image: url('./imagens/501463.jpg');
+    background-image: url('https://images.pexels.com/photos/585758/pexels-photo-585758.jpeg');
     background-size: cover;
     /* background-position: center; */
     height: 100vh;
@@ -71,14 +80,13 @@ main{
 }
 
 main h1{
-    font-family: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
-    font-weight: bold;
+    font-family: 'Poppins'; 
     font-size: clamp(2rem, 8vw, 4rem);
 }
 
 main p {
-    font-family: 'Open Sans';
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-family: 'Poppins';
+    font-size: clamp(0.3rem, 2vw, 1.1rem);
     max-width: 56rem;
 }
 
@@ -149,4 +157,180 @@ ul li h3 {
     line-height: 2.8rem;
     margin-bottom: 2rem;
     overflow: hidden;
+}
+
+#contact{
+    position: relative;
+}
+
+.filter {
+    background: rgba(0, 0, 0, 0.55);;
+}
+
+.video-banner {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.callout {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+.callout h2 {
+    font-weight: bold;
+    font-size: clamp(1rem, 4vw, 36px);
+    line-height: 5.4rem;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+}
+
+.callout a {
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    background: #EFAA78;
+    padding: 10px 32px 10px;
+    border-radius: 5px;
+}
+
+.socials {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.socials h3{
+    color: white;
+}
+
+.socials a {
+    font-size: 44px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    opacity: 0.7;
+}
+
+
+
+/* ===MEDIA QUERIES=== */
+
+/* Estilos para telas menores (tablets e smartphones) */
+@media (max-width: 768px) {
+    /* Ajustes para a seção #home */
+    #home {
+        background-position: center;
+    }
+
+    header .brand {
+        left: 5%;
+    }
+
+    header nav {
+        right: 5%;
+    }
+
+    main {
+        left: 5%;
+        max-width: 90%;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    main a {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    /* Ajustes para a seção #explore */
+    #explore {
+        width: 90%;
+    }
+
+    ul li h2,
+    ul li h3 {
+        font-size: 1.5rem;
+    }
+
+    ul li p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    /* Ajustes para a seção #contact */
+    .callout h2 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .callout a {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .socials a {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para telas muito pequenas (smartphones pequenos) */
+@media (max-width: 480px) {
+    /* Ajustes para a seção #home */
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    main a {
+        font-size: 0.9rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    /* Ajustes para a seção #explore */
+    ul li h2,
+    ul li h3 {
+        font-size: 1.2rem;
+    }
+
+    ul li p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    /* Ajustes para a seção #contact */
+    .callout h2 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .callout a {
+        font-size: 0.9rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .socials a {
+        font-size: 1.5rem;
+    }
 }
